@@ -10,7 +10,6 @@ Safety Buffer	18,450 kWh	Headroom to warning threshold
 Grid Stress Level	Minimal	No voltage fluctuations detected
 2. Temporal Analysis
 Daily Load Profile (Simulated)
-python
 # Peak/Off-Peak Simulation (Typical Day)
 morning_low = 30,000-40,000 kWh   # (5:00 AM - 9:00 AM)
 daytime_rise = 45,000-60,000 kWh  # (10:00 AM - 4:00 PM) 
@@ -49,7 +48,6 @@ Test microgrid islanding capabilities in Rigoma Ward
 Medium-Term (Next 6 Months)
 Load Forecasting Model
 
-python
 # Sample predictive algorithm
 predicted_load = baseline + (1.2 * population_growth) + (0.8 * industrial_expansion)
 Accuracy: ±5% error margin (needs weather data integration)
