@@ -1,0 +1,22 @@
+<!-- index.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Nyamira Energy Dashboard</title>
+  <meta http-equiv="refresh" content="60">
+  <style>body{font-family:Arial;background:#111;color:#eee;margin:2rem}</style>
+</head>
+<body>
+  <h1>Nyamira County Live Energy</h1>
+  <div id="data">Loading…</div>
+  <script>
+  fetch("https://raw.githubusercontent.com/momaxx/NYAMERI-NYAMIRA-LIVE-ENERGY-MONITOR/main/latest_snapshot.json")
+    .then(r=>r.json())
+    .then(d=>document.getElementById("data").innerHTML=
+      `Consumption: ${d.consumption_kwh.toLocaleString()} kWh<br>
+       Renewables: ${(d.renewable_pct).toFixed(1)} %<br>
+       Updated: ${d.timestamp}`);
+  </script>
+</body>
+</html>
